@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "board": "k3-com260",
+  "product": "minimal",
+  "description": "K3 COM260 board - minimal build configuration",
+  "enabled_packages": [
+    "components/peripherals/motor",
+    "components/peripherals/lidar",
+    "components/smart_voice/mlink/device",
+    "components/multimedia/audio",
+    "components/model_zoo/stt",
+    "middleware/ros2/mlink/cpp",
+    "components/smart_voice/voice_agent"
+  ],
+  "enabled_package_options": {
+    "components/peripherals/motor": { "enabled_drivers": ["drv_can_dm"] },
+    "components/peripherals/imu": { "enabled_drivers": ["drv_uart_cmp10a"] },
+    "components/peripherals/lidar": { "enabled_drivers": ["drv_uart_ydlidar", "drv_uart_rplidar"] },
+    "components/peripherals/nfc": { "enabled_drivers": ["drv_i2c_SI512"] },
+    "components/peripherals/pm": { "enabled_drivers": [] }
+  },
+  "options": {
+    "parallel_jobs": 4,
+    "auto_resolve_dependencies": true
+  }
+}
