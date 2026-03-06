@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "board": "kx-generic",
+  "product": "omni_agent",
+  "description": "KX generic board - omni_agent build configuration",
+  "enabled_packages": [
+    "components/multimedia/audio",
+    "components/model_zoo/asr",
+    "components/model_zoo/tts",
+    "components/model_zoo/vad",
+    "components/model_zoo/llm",
+    "components/smart_voice/mcp",
+    "application/native/omni_agent"
+  ],
+  "options": {
+    "parallel_jobs": 8,
+    "auto_resolve_dependencies": true
+  }
+}
