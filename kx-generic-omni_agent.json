@@ -9,7 +9,8 @@
     "components/model_zoo/tts",
     "components/model_zoo/vad",
     "components/model_zoo/llm",
-    "components/smart_voice/mcp",
+    "components/model_zoo/vision",
+    "components/agent_tools/mcp",
     "application/native/omni_agent"
   ],
   "options": {
