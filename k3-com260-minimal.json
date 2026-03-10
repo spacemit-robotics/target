@@ -4,13 +4,11 @@
   "product": "minimal",
   "description": "K3 COM260 board - minimal build configuration",
   "enabled_packages": [
+    "components/peripherals/imu",
     "components/peripherals/motor",
     "components/peripherals/lidar",
-    "components/smart_voice/mlink/device",
-    "components/multimedia/audio",
-    "components/model_zoo/stt",
-    "middleware/ros2/mlink/cpp",
-    "components/smart_voice/voice_agent"
+    "components/agent_tools/mlink/device",
+    "middleware/ros2/smart_voice/mlink/cpp"
   ],
   "enabled_package_options": {
     "components/peripherals/motor": { "enabled_drivers": ["drv_can_dm"] },
