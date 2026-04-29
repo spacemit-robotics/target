@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "board": "k3-com260-kit",
+  "product": "humanoid-unitree-go1",
+  "description": "humanoid unitree go1 — rv64 real robot / x86_64 simulation (mujoco auto-skipped on rv64)",
+  "enabled_packages": [
+    "components/model_zoo/rl",
+    "components/simulation/mujoco",
+    "application/native/humanoid_common",
+    "application/native/humanoid_unitree_go1"
+  ],
+  "options": {
+    "parallel_jobs": 4,
+    "auto_resolve_dependencies": true
+  }
+}
