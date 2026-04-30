@@ -16,7 +16,7 @@
 
   ],
   "enabled_package_options": {
-    "components/peripherals/motor": { "enabled_drivers": ["drv_uart_rm"] },
+    "components/peripherals/motor": { "enabled_drivers": ["drv_uart_xl330"] },
     "components/peripherals/pm": { "enabled_drivers": [] }
   },
   "options": {
