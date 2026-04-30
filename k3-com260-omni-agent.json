@@ -1,14 +1,15 @@
 {
   "version": "1.0",
-  "board": "kx-generic",
-  "product": "omni_agent",
-  "description": "KX generic board - omni_agent build configuration",
+  "board": "k3-com260",
+  "product": "omni-agent",
+  "description": "K3 COM260 board - omni_agent build configuration",
   "enabled_packages": [
     "components/multimedia/audio",
     "components/model_zoo/asr",
     "components/model_zoo/tts",
     "components/model_zoo/vad",
     "components/model_zoo/llm",
+    "components/model_zoo/voiceprint",
     "components/model_zoo/vision",
     "components/agent_tools/mcp",
     "application/native/omni_agent"

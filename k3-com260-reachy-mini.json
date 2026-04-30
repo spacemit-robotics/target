@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "board": "k3-com260",
+  "product": "reachy-mini",
+  "description": "K3 COM260 board - reachy-mini build configuration",
+  "enabled_packages": [
+    "components/peripherals/motor",
+    "components/multimedia/audio",
+    "components/model_zoo/asr",
+    "components/model_zoo/tts",
+    "components/model_zoo/llm",
+    "components/model_zoo/vad",
+    "components/model_zoo/vision",
+    "components/agent_tools/mcp",
+    "application/native/reachy_mini"
+
+  ],
+  "enabled_package_options": {
+    "components/peripherals/motor": { "enabled_drivers": ["drv_uart_rm"] },
+    "components/peripherals/pm": { "enabled_drivers": [] }
+  },
+  "options": {
+    "parallel_jobs": 4,
+    "auto_resolve_dependencies": true
+  }
+}

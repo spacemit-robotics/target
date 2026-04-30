@@ -1,15 +1,28 @@
 {
   "version": "1.0",
   "board": "k3-com260",
-  "product": "minimal",
-  "description": "K3 COM260 board - minimal build configuration",
+  "product": "linksee",
+  "description": "K3 COM260 board - linksee build configuration",
   "enabled_packages": [
     "components/peripherals/imu",
     "components/peripherals/motor",
     "components/peripherals/lidar",
-    "components/agent_tools/mlink_device"
+    "components/agent_tools/mlink_device",
+    "components/control/base",
+    "components/multimedia/audio",
+    "components/model_zoo/asr",
+    "components/model_zoo/vad",
+    "middleware/ros2/control/base",
+    "middleware/ros2/peripherals/lidar",
+    "middleware/ros2/peripherals/imu",
+    "middleware/ros2/planning/nav2",
+    "middleware/ros2/slam/cartographer_run",
+    "middleware/ros2/slam/rtabmap_run",
+    "middleware/ros2/slam/slam_toolbox_run",
+    "application/ros2/linksee"
   ],
   "enabled_package_options": {
+    "components/control/base": { "enabled_drivers": ["drv_rpmsg_esos"] },
     "components/peripherals/motor": { "enabled_drivers": ["drv_can_dm"] },
     "components/peripherals/imu": { "enabled_drivers": ["drv_uart_cmp10a"] },
     "components/peripherals/lidar": { "enabled_drivers": ["drv_uart_ydlidar", "drv_uart_rplidar"] },
