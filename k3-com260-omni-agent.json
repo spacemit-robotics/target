@@ -5,6 +5,7 @@
   "description": "K3 COM260 board - omni_agent build configuration",
   "enabled_packages": [
     "components/multimedia/audio",
+    "components/multimedia/audio_process/doa",
     "components/model_zoo/asr",
     "components/model_zoo/tts",
     "components/model_zoo/vad",
