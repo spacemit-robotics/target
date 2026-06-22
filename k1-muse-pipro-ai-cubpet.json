@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "board": "k1",
+  "board": "k1-muse-pipro",
   "product": "ai-cubpet",
   "description": "K1 AI Cubpet build configuration",
   "enabled_packages": [
