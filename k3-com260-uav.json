@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "board": "k3",
+  "product": "uav",
+  "description": "K3 UAV Native build configuration",
+  "enabled_packages": [
+    "components/control/gimbal",
+    "application/ros2/uav"
+  ],
+  "enabled_package_options": {
+    "components/control/gimbal": { "enabled_drivers": ["drv_udp_c12"] }
+  },
+  "options": {
+    "parallel_jobs": 4,
+    "auto_resolve_dependencies": true
+  }
+}
