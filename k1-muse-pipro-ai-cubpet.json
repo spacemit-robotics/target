@@ -10,6 +10,10 @@
     "components/peripherals/nfc",
     "components/peripherals/motor",
     "components/peripherals/light_sensor",
+    "components/multimedia/audio",
+    "components/multimedia/audio_process/doa",
+    "components/model_zoo/asr",
+    "components/model_zoo/vad",
     "application/native/ai-cubpet"
   ],
   "enabled_package_options": {
