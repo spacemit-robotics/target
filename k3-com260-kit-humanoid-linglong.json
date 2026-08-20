@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "board": "k3-com260-kit",
+  "product": "humanoid-linglong",
+  "description": "humanoid linglong - x86_64 MuJoCo simulation / rv64 whole_body hardware deployment",
+  "enabled_packages": [
+    "components/peripherals/motor",
+    "components/peripherals/imu",
+    "components/model_zoo/rl",
+    "components/simulation/mujoco",
+    "components/control/whole_body",
+    "application/native/humanoid_common",
+    "application/native/humanoid_linglong"
+  ],
+  "enabled_package_options": {
+    "components/peripherals/motor": {
+      "enabled_drivers": ["drv_can_dm", "drv_can_encos"]
+    },
+    "components/peripherals/imu": {
+      "enabled_drivers": ["drv_uart_forsense"]
+    },
+    "application/native/humanoid_common": {
+      "enabled_backends": ["mujoco", "whole_body"]
+    }
+  },
+  "options": {
+    "parallel_jobs": 4,
+    "auto_resolve_dependencies": true
+  }
+}

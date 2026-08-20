@@ -12,6 +12,7 @@
 | 文件 | 说明 |
 | ---- | ---- |
 | `k3-com260-minimal.json` | K3 COM260 板卡，最小配置 |
+| `k3-com260-kit-humanoid-linglong.json` | 灵龙人形机器人，MuJoCo 仿真与 whole_body 实机链 |
 | `k3-com260-lekiwi.json` | K3 COM260，lekiwi 产品配置 |
 | `k3-com260-diablo.json` | K3 COM260，diablo 产品配置 |
 
@@ -43,7 +44,8 @@ BUILD_TARGET=k3-com260-minimal ./build/build.sh all
 
 ### enabled_package_options
 
-用于给特定包传递构建选项。外设包常用 `enabled_drivers` 指定要启用的驱动：
+用于给特定包传递构建选项。外设包常用 `enabled_drivers` 指定要启用的驱动；组件也可用
+自身定义的选项启用条件依赖，例如 `humanoid_common.enabled_backends`：
 
 ```json
 "enabled_package_options": {
@@ -52,6 +54,9 @@ BUILD_TARGET=k3-com260-minimal ./build/build.sh all
   },
   "components/peripherals/lidar": {
     "enabled_drivers": ["drv_uart_ydlidar", "drv_uart_rplidar"]
+  },
+  "application/native/humanoid_common": {
+    "enabled_backends": ["mujoco", "whole_body"]
   }
 }
 ```
