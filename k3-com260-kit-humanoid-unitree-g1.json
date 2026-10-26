@@ -2,13 +2,24 @@
   "version": "1.0",
   "board": "k3-com260-kit",
   "product": "humanoid-unitree-g1",
-  "description": "humanoid unitree g1 — rv64 real robot / x86_64 simulation (mujoco auto-skipped on rv64)",
+  "description": "humanoid unitree g1 — whole_body hardware development / MuJoCo simulation",
   "enabled_packages": [
+    "components/peripherals/motor",
+    "components/peripherals/imu",
     "components/model_zoo/rl",
     "components/simulation/mujoco",
+    "components/control/whole_body",
     "application/native/humanoid_common",
     "application/native/humanoid_unitree_g1"
   ],
+  "enabled_package_options": {
+    "components/peripherals/motor": {
+      "enabled_drivers": ["drv_uart_rs485_20_26"]
+    },
+    "components/peripherals/imu": {
+      "enabled_drivers": ["drv_uart_hi91"]
+    }
+  },
   "options": {
     "parallel_jobs": 4,
     "auto_resolve_dependencies": true
