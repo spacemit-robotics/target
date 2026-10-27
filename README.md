@@ -15,6 +15,7 @@
 | `k3-com260-kit-humanoid-linglong.json` | 灵龙人形机器人，MuJoCo 仿真与 whole_body 实机链 |
 | `k3-com260-lekiwi.json` | K3 COM260，lekiwi 产品配置 |
 | `k3-com260-diablo.json` | K3 COM260，diablo 产品配置 |
+| `k3-com260-unitree-go2.json` | Go2 ROS 2 应用，大核 ONNX 推理、M8010-A 电机、IMU、SBUS 和 LED |
 
 ## 如何使用
 
