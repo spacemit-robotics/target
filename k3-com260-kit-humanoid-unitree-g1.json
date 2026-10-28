@@ -13,9 +13,6 @@
     "application/native/humanoid_unitree_g1"
   ],
   "enabled_package_options": {
-    "components/model_zoo/rl": {
-      "cmake_options": {"USE_MNN_BACKEND": true}
-    },
     "components/peripherals/motor": {
       "enabled_drivers": ["drv_uart_rs485_20_26"]
     },
