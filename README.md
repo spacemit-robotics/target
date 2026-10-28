@@ -61,7 +61,21 @@ BUILD_TARGET=k3-com260-minimal ./build/build.sh all
 }
 ```
 
-构建时会转换为 CMake 参数，例如：`-DSROBOTIS_PERIPHERALS_MOTOR_ENABLED_DRIVERS=drv_can_dm;drv_uart_feetech`。
+外设 `enabled_drivers` 构建时会转换为 CMake 参数，例如：
+`-DSROBOTIS_PERIPHERALS_MOTOR_ENABLED_DRIVERS=drv_can_dm;drv_uart_feetech`。
+`enabled_backends` 用于条件依赖声明，不直接设置 CMake 后端开关；common 根据已安装依赖发现后端。
+
+非 ROS2 CMake 包可通过 `cmake_options` 显式传递构建变量，例如：
+
+```json
+"components/model_zoo/rl": {
+  "cmake_options": {"USE_MNN_BACKEND": true}
+}
+```
+
+该配置转换为 `-DUSE_MNN_BACKEND=true`，G1 target 默认启用此选项。
+需要构建系统支持 `cmake_options`；值支持单行字符串、布尔值和数字，
+带空格或分号的字符串作为单个参数传递。其他 target 未配置时保留组件默认值。
 
 ### options
 
